@@ -2,6 +2,7 @@
 <html lang='ja'>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <nav class="navbar navbar-light bg-info">
@@ -17,6 +18,7 @@
             栄冠
           </div>
         <div class="card-body">
+            <form action="" method="post">
           <input id="counterOutput_Eikan" value="0">
           <button type="button" class="btn btn-primary" id="plusButton_Eikan">+</button>
           <button type="button" class="btn btn-danger" id="minusButton_Eikan">-</button>
@@ -66,85 +68,84 @@
             <input id="sumarea" value="0" size="6" >
         </div>
     </div>
-
-
+    <input type="submit" class="btn btn-submit" value="保存">
+    </form>
 
 
     <script>
         let sumarea = document.getElementById("sumarea");
-        
+      
 
-        let counterOutput_1 = document.getElementById("counterOutput_Eikan");
-        let plusButton_Eikan = document.getElementById("plusButton_Eikan");
-        let onClickPlusButton_1 = () => {
-            counterOutput_1.value++;
-            sumarea.value++;
-        };
-        plusButton_Eikan.addEventListener("click", onClickPlusButton_1);
+      let counterOutput_1 = document.getElementById("counterOutput_Eikan");
+      let plusButton_Eikan = document.getElementById("plusButton_Eikan");
+      let onClickPlusButton_1 = () => {
+          counterOutput_1.value++;
+          sumarea.value++;
+      };
+      plusButton_Eikan.addEventListener("click", onClickPlusButton_1);
 
-        let minusButton_Eikan = document.getElementById("minusButton_Eikan");
-        let onClickMinusButton_1 = () => {
-        if (counterOutput_1.value >= 1) {
-            counterOutput_1.value--; 
-            sumarea.value--;
-            }
-        };
-        minusButton_Eikan.addEventListener("click", onClickMinusButton_1);
-
-
-        let counterOutput_2 = document.getElementById("counterOutput_Hagyou");
-        let plusButton_Hagyou = document.getElementById("plusButton_Hagyou");
-        let onClickPlusButton_2 = () => {
-            counterOutput_2.value++;
-            sumarea.value++;
-        };
-        plusButton_Hagyou.addEventListener("click", onClickPlusButton_2);
-
-        let minusButton_Hagyou = document.getElementById("minusButton_Hagyou");
-        let onClickMinusButton_2 = () => {
-        if (counterOutput_2.value >= 1) {
-            counterOutput_2.value--;
-            sumarea.value--; 
-            }
-        };
-        minusButton_Hagyou.addEventListener("click", onClickMinusButton_2);
-        
-        let counterOutput_3 = document.getElementById("counterOutput_Sigoku");
-        let plusButton_Sigoku = document.getElementById("plusButton_Sigoku");
-        let onClickPlusButton_3 = () => {
-            counterOutput_3.value++;
-            sumarea.value++;
-        };
-        plusButton_Sigoku.addEventListener("click", onClickPlusButton_3);
-
-        let minusButton_Sigoku = document.getElementById("minusButton_Sigoku");
-        let onClickMinusButton_3 = () => {
-        if (counterOutput_3.value >= 1) {
-            counterOutput_3.value--; 
-            sumarea.value--; 
-            }
-        };
-        minusButton_Sigoku.addEventListener("click", onClickMinusButton_3);
-
-        let counterOutput_4 = document.getElementById("counterOutput_Hihi");
-        let plusButton_Hihi = document.getElementById("plusButton_Hihi");
-        let onClickPlusButton_4 = () => {
-            counterOutput_4.value++;
-            sumarea.value++;
-        };
-        plusButton_Hihi.addEventListener("click", onClickPlusButton_4);
-
-        let minusButton_Hihi = document.getElementById("minusButton_Hihi");
-        let onClickMinusButton_4 = () => {
-        if (counterOutput_4.value >= 1) {
-            counterOutput_4.value--; 
-            sumarea.value--;
-            }
-        };
-        minusButton_Hihi.addEventListener("click", onClickMinusButton_4);
+      let minusButton_Eikan = document.getElementById("minusButton_Eikan");
+      let onClickMinusButton_1 = () => {
+      if (counterOutput_1.value >= 1) {
+          counterOutput_1.value--; 
+          sumarea.value--;
+          }
+      };
+      minusButton_Eikan.addEventListener("click", onClickMinusButton_1);
 
 
-        
-    </script>
+      let counterOutput_2 = document.getElementById("counterOutput_Hagyou");
+      let plusButton_Hagyou = document.getElementById("plusButton_Hagyou");
+      let onClickPlusButton_2 = () => {
+          counterOutput_2.value++;
+          sumarea.value++;
+      };
+      plusButton_Hagyou.addEventListener("click", onClickPlusButton_2);
+
+      let minusButton_Hagyou = document.getElementById("minusButton_Hagyou");
+      let onClickMinusButton_2 = () => {
+      if (counterOutput_2.value >= 1) {
+          counterOutput_2.value--;
+          sumarea.value--; 
+          }
+      };
+      minusButton_Hagyou.addEventListener("click", onClickMinusButton_2);
+      
+      let counterOutput_3 = document.getElementById("counterOutput_Sigoku");
+      let plusButton_Sigoku = document.getElementById("plusButton_Sigoku");
+      let onClickPlusButton_3 = () => {
+          counterOutput_3.value++;
+          sumarea.value++;
+      };
+      plusButton_Sigoku.addEventListener("click", onClickPlusButton_3);
+
+      let minusButton_Sigoku = document.getElementById("minusButton_Sigoku");
+      let onClickMinusButton_3 = () => {
+      if (counterOutput_3.value >= 1) {
+          counterOutput_3.value--; 
+          sumarea.value--; 
+          }
+      };
+      minusButton_Sigoku.addEventListener("click", onClickMinusButton_3);
+
+      let counterOutput_4 = document.getElementById("counterOutput_Hihi");
+      let plusButton_Hihi = document.getElementById("plusButton_Hihi");
+      let onClickPlusButton_4 = () => {
+          counterOutput_4.value++;
+          sumarea.value++;
+      };
+      plusButton_Hihi.addEventListener("click", onClickPlusButton_4);
+
+      let minusButton_Hihi = document.getElementById("minusButton_Hihi");
+      let onClickMinusButton_4 = () => {
+      if (counterOutput_4.value >= 1) {
+          counterOutput_4.value--; 
+          sumarea.value--;
+          }
+      };
+      minusButton_Hihi.addEventListener("click", onClickMinusButton_4);
+  </script>
+    
+   
 </body>
 </html>
